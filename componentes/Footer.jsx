@@ -1,8 +1,9 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
-import { useNavigationState } from '@react-navigation/native';
+import { useNavigation, useNavigationState } from '@react-navigation/native';
 
-export default function Footer({ navigation }) {
+export default function Footer() {
+  const navigation = useNavigation();
   const pantallaActual = useNavigationState((estado) => estado.routes[estado.index].name);
 
   return (
